@@ -6,7 +6,7 @@ class CreatePigs < ActiveRecord::Migration[6.0]
       t.text :bio
       t.integer :age
       t.string :profession
-      t.refrences :user
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
