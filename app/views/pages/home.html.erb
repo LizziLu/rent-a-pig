@@ -1,23 +1,31 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1592912819336-8e408fa8efb8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80")>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url( <%= image_path "banner.jpg" %>)"> 
   <div class="container">
     <h1>Rent a Pig
     <p>Because without a pig... <br> Is life actually worth living?</p>
   </div>
 </div>
-<div>
 
-<div class="d-flex justify-content-end">
-  <div class="container border">
-    <h3 class="text-right">Our newest professional pig addition</h2>
-    <div class="container row justify-content-end m-4">
 
-      <div class="card-product col-4">
-        <img src="https://images.unsplash.com/photo-1583205188670-ce90796eb01c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80" />
-        <div class="card-product-infos">
-          <h2>Meet Betsy</h2>
-          <p>The 250kg full-stack Web Dev Master</p>
-        </div>
+
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="side-image-box" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url( <%= image_path "home-side-image.jpg" %>)">
+      <h3 id="side-image-box-header">Book your Pig for any occasion</h3>
+      <p class="side-image-box-text-top">Do you need a to do your taxes? <br> The doctor does not have time for you? <br> Your business needs a UI-Designer? <br> Your pig has more skills than your boss? <br> No matter if you seek a pig or want to offer your pig´s services <br> Find a Pig can help! </p>
+      <p id="side-image-box-text-bottom">Your pig has more skills than your boss? <br> No matter if you seek a pig or want to offer your pig´s services <br> Find a Pig can help! </p>
+      <div class= side-image-box-button>
+        <button class= "btn btn-primary"> Find your pig!</button>
       </div>
     </div>
+      <div class="">
+        <h5>Our newest professional pig</h5>
+        <div class="card-product d-flex">
+          <img src="https://images.unsplash.com/photo-1583205188670-ce90796eb01c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80" />
+          <div class="card-product-infos">
+            <h2>Meet Betsy</h2>
+            <p>The 250kg full-stack Web Dev Master</p>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
