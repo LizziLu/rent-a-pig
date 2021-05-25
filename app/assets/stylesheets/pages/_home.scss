@@ -1,1 +1,29 @@
 // Specific CSS for your home-page
+
+.side-image-box{
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.side-image-box-button {
+  position:absolute;
+  bottom: 16px;
+  left: 35%;
+}
+
+#side-image-box-text-bottom {
+  position: absolute;
+  bottom: 80px;
+}
+
+#side-image-box-text-top {
+  margin-top: 32px;
+}
