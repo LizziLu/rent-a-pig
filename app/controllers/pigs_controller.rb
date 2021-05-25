@@ -13,6 +13,7 @@ class PigsController < ApplicationController
 
   def create
     @pig = Pig.new(pig_params)
+    @pig.user = current_user
     if @pig.save
       redirect_to pigs_path
     else
