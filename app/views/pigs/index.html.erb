@@ -1,0 +1,6 @@
+<h1>Our Pigs</h1>
+
+<% @pigs.each do |p| %>
+<p><%= link_to p.name, pig_path(p) %></p>
+<p>Weight: <%= p.weight %> Age: <%= p.age %> Bio: <%= p.bio %> Profession: <%= p.profession %> </p>
+<% end %>
