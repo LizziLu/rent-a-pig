@@ -8,4 +8,5 @@ class Pig < ApplicationRecord
   validates :profession, presence: true
   validates :bio, presence: true, length: { minimum: 100 }
   validates :weight, presence: true
+  validates :price, presence: true
 end
