@@ -1,0 +1,43 @@
+.card-show {
+  color: white;
+  height: 500px;
+  width:800px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  box-shadow: 3px 8px 12px rgba(0,0,0,0.3);
+  margin-top: 30px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.card-show img {
+  height: 200px;
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 3px 8px 12px rgba(0,0,0,0.3);
+  margin-left: 10px;
+}
+
+.card-show-title {
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 30px;
+  color: #ffb3b3;
+  font-weight: bold;
+}
+
+.card-show-infos {
+  color: black;
+  justify-content: center;
+  font-weight: thin;
+}
+
+.card-show .btn {
+  margin-right: 400px;
+  margin-top: 50px;
+  position: relative;
+}
+

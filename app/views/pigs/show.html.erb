@@ -1,8 +1,18 @@
-<h1> <%= @pig.name %> </h1>
-
-<ul>
-  <li>Weight: <%= @pig.weight %></li>
-  <li>Age: <%= @pig.age %></li>
-  <li>Bio: <%= @pig.bio %></li>
-  <li>Profession: <%= @pig.profession %></li>
-</ul>
+<div class="container">
+    <div class="card-show">
+      <img src="https://scitechdaily.com/images/Happy-Pig.jpg" />
+    <div class="card-show-infos">
+      <div class="card-show-title">
+        <h2><%= @pig.name %></h2>
+      </div>
+       <ul>
+          <li><u>Weight:</u> <%= @pig.weight %></li>
+          <li><u>Age:</u> <%= @pig.age %></li>
+          <li><u>Profession:</u> <%= @pig.profession %></li>
+          <li><u>Bio:</u> <%= @pig.bio %></li>
+        </ul>
+        <div>
+          <%= link_to 'Back', pigs_path, class: "btn btn-primary" %>
+        </div>
+    </div>
+</div>
