@@ -1,2 +1,38 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.pig-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 12px;
+}
+
+.grid-pig {
+  display: flex;
+  box-shadow: 8px 4px 4px rgba(200, 200, 200, 0.1);
+  margin: 4px;
+  padding: 8px;
+  .pig-image{
+    width: 100px;
+    height: 100px;
+  }
+  .pig-property-list{
+    list-style-type: none;
+    padding: 4px;
+  }
+  .pig-bio{
+    font-size: medium;
+    padding: 4px;
+    padding-left: 12px;
+    background-color:rgba(197, 146, 42, 0.05);;
+    margin-left: 4px;
+  }
+  .pig-name{
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+  }
+  .pig-list-item{
+    font-size: small;
+  }
+}
