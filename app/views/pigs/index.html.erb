@@ -1,7 +1,20 @@
-<h1>Our Pigs</h1>
+<div class="container">
+  <h1 class = "text-center index-header mb-8">Pick A Pig For Your Purpose</h1>
 
-<% @pigs.each do |p| %>
-<%= image_tag p.photo %>
-<p><%= link_to p.name, pig_path(p) %></p>
-<p>Weight: <%= p.weight %> Age: <%= p.age %> Bio: <%= p.bio %> Profession: <%= p.profession %> </p>
-<% end %>
+  <div class= "pig-grid">
+    <% @pigs.each do |p| %>
+    <div class= "grid-pig">
+    <div>
+      <%= image_tag p.photo, class:"pig-image" %>
+      <ul class= "pig-property-list">
+        <li class= "pig-name"><%= link_to p.name, pig_path(p) %></li>
+        <li class="pig-list-item"><%= p.profession %></li>
+        <li class="pig-list-item"><%= p.age %> years old</li>
+        <li class="pig-list-item"><%= p.weight %> kg</li>
+      </ul>
+    </div>
+      <p class="pig-bio"> <%= p.bio %></p>
+    </div>
+    <% end %>
+  </div>
+</div>
