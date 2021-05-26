@@ -1,6 +1,6 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url( <%= image_path "banner.jpg" %>)"> 
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url( <%= image_path "banner.jpg" %>)">
   <div class="container">
-    <h1>Rent a Pig
+    <h1>Pick a Pig</h1>
     <p>Because without a pig... <br> Is life actually worth living?</p>
   </div>
 </div>
@@ -12,9 +12,9 @@
     <div class="side-image-box" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url( <%= image_path "home-side-image.jpg" %>)">
       <h3 id="side-image-box-header">Book your Pig for any occasion</h3>
       <p id="side-image-box-text-top">Do you need a to do your taxes? <br> The doctor does not have time for you? <br> Your business needs a UI-Designer?</p>
-      <p id="side-image-box-text-bottom">Your pig has more skills than your boss? <br> No matter if you seek a pig or want to offer your pig´s services <br> Find a Pig can help! </p>
+      <p id="side-image-box-text-bottom">Your pig has more skills than your boss? <br> No matter if you seek a pig or want to offer your pig´s services <br> Pick a Pig can help! </p>
       <div class= side-image-box-button>
-        <button class= "btn btn-primary"> Pick a pig!</button>
+        <%= link_to "Pick a pig!", pigs_path, class: "btn btn-primary" %>
       </div>
     </div>
       <div class="">
