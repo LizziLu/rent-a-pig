@@ -5,17 +5,22 @@
       <div class="card-show-title">
         <h2><%= @pig.name %></h2>
       </div>
-       <ul>
+       <ul class="pig-list">
           <li><u>Weight:</u> <%= @pig.weight %></li>
           <li><u>Age:</u> <%= @pig.age %></li>
           <li><u>Profession:</u> <%= @pig.profession %></li>
           <li><u>Bio:</u> <%= @pig.bio %></li>
+          <li><u>Price:</u> <%= @pig.price %> € per day</li>
         </ul>
         <div>
           <!-- Button trigger modal -->
+
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Launch demo modal
+            Book now
           </button>
+          <% unless @pig.bookings.where(user: current_user).empty?%>
+          <p style="color:green"><%= "booked"%></p>
+          <% end %>
 
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -33,10 +38,6 @@
                   <%= f.submit %>
 
                   <% end %>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
               </div>
             </div>

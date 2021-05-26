@@ -6,8 +6,7 @@ class BookingsController < ApplicationController
     @booking.pig = @pig
     @booking.user = @user
     @booking.save
-    redirect_to pigs_path
-
+    redirect_to pig_path(@pig), notice: "Your booking was succesfull!"
   end
 
   private
