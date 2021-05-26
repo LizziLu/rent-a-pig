@@ -1,15 +1,16 @@
 .card-show {
   color: white;
-  height: 400px;
+  height: 500px;
   width:800px;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: space-between;
   font-weight: bold;
   box-shadow: 3px 8px 12px rgba(0,0,0,0.3);
   margin-top: 30px;
   margin-left: 10px;
+  position: relative;
 }
 
 .card-show img {
@@ -17,13 +18,15 @@
   width: 350px;
   border-radius: 5px;
   box-shadow: 3px 8px 12px rgba(0,0,0,0.3);
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .card-show-title {
-  margin: 10px;
+  margin-top: 20px;
+  padding: 20px;
   font-size: 30px;
-  color: black;
+  color: #ffb3b3;
+  font-weight: bold;
 }
 
 .card-show-infos {
@@ -31,3 +34,10 @@
   justify-content: center;
   font-weight: thin;
 }
+
+.card-show .btn {
+  margin-right: 400px;
+  margin-top: 50px;
+  position: relative;
+}
+
