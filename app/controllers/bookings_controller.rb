@@ -1,15 +1,19 @@
 class BookingsController < ApplicationController
   def create
-    @booking = Booking.new
-    @pig = Pig.find(params[:pig_id])
+    @booking = Booking.new(booking_params)
     @user = current_user
+    @pig = Pig.find(params[:pig_id])
     @booking.pig = @pig
     @booking.user = @user
-    if @booking.save
-      redirect_to pig_path(@pig)
-    else
-      render 'pigs/show'
-    end
+    @booking.save
+    redirect_to pigs_path
+
+  end
+
+  private
+  def booking_params
+    params.require(:booking).permit(:booking_date)
+
   end
 end
 

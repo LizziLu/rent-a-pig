@@ -4,6 +4,7 @@ class PigsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @pig = Pig.find(params[:id])
   end
 
