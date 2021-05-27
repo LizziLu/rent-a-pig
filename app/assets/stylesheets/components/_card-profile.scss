@@ -1,17 +1,23 @@
 #card-profile {
+background-color: white;
 position: sticky;
 margin-right: 20px;
-border-radius: 30px;
+border-radius: 10px;
 border: none;
-margin-top: 30px
+margin-top: 30px;
+border: 2px solid rgb(197, 146, 42);
+box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 #profile-pic {
-  height: 300px;
-  width: 300px;
-  margin: 20px auto;
+  height: 30%;
+  width: 100%;
+  margin: 40px auto 10px auto;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 #profile-items  {
-  justify-content: center;
+  justify-content:center;
+  margin-bottom: 30px;
 }
