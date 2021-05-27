@@ -4,6 +4,8 @@
   margin: 30px 0;
   padding-bottom: 30px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border: 1px solid rgb(197, 146, 42);
+
 }
 
 .dashboard-title {
@@ -16,7 +18,8 @@
   border: 0;
   overflow: hidden;
   border-radius: 10px;
-  margin: 30px
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 .pig-dashboard-card > img {
@@ -45,3 +48,8 @@
   padding: 20px 20px 5px 20px;
   border-radius: 10px 10px 0 0;
 }
+
+.no-margin {
+  margin-right: 0
+}
+

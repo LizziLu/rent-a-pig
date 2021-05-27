@@ -5,23 +5,28 @@
   <div id = "card-profile" class="card text-center" style="width: 40%;">
     <img id= "profile-pic" src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80 " class="card-img-top rounded-circle" alt="...">
   <div class="card-body">
-      <h3 class="card-title">
-        <%= current_user.first_name %> <%= current_user.last_name%>
-      </h5>
+      <h2 class="card-title">
+        <strong>
+          <%= current_user.first_name %> <%= current_user.last_name%>
+        </strong>
+      </h2>
       <div id ="profile-items" class="footer-links">
         <a href="#"><i class="far fa-envelope"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
       </div>
 
-      <div>
-        <h4>You own:</h4>
-<p><%= current_user.pigs.count %> 🐽</p>
+      <div class= "dashboard-info">
+        <h4><strong>You own:</strong></h4>
+        <h4><%= current_user.pigs.count %> 🐽</h4>
+        <a class="btn btn-primary btn-width" href="/pigs/new">Add a Pig</a>
         </div>
 
-      <div>
-        <h4>You booked:</h4>
-        <p><%= current_user.bookings.count %> 🐽 🐽</p>
+      <div class="spacer dashboard-info">
+        <h4><strong>Current Bookings:</strong></h4>
+        <h4><%= current_user.bookings.count %> 🐽</h4>
+        <a class="btn btn-primary btn-width" href="/pigs">Book a Pig</a>
+
       </div>
 
 
@@ -35,13 +40,13 @@
 <!-- Pig cards -->
     <div class = "pig-overview">
     <div class="dashboard-header">
-    <h2 class="dashboard-title">My Pigs</h2>
+    <h2 class="dashboard-title"><strong>My Pigs</strong></h2>
     </div>
-     <div class="row">
+     <div class="row justify-content-start no-margin">
 
           <% @offered_pigs.each do |p| %>
-          <div class="col-6">
-            <div class="card pig-dashboard-card" style="width: 18rem;">
+          <div class="col-6" align="center">
+            <div class="card pig-dashboard-card" style="width: 22rem;">
               <%= image_tag p.photo, class:"card-img-top" %>
                 <div class="card-body card-body-dashboard">
                   <div>
@@ -57,14 +62,15 @@
 
 <div class = "pig-overview">
   <div class="dashboard-header">
-      <h2 class="dashboard-title">My Pig Bookings</h2>
+      <h2 class="dashboard-title"><strong>My Pig Bookings</strong></h2>
       </div>
-          <div class="row">
+          <div class="row justify-content-start no-margin">
 
             <%if current_user.bookings.present? %>
             <% @bookings.each do |booking| %>
+
           <div class="col-6">
-            <div class="card pig-dashboard-card" style="width: 18rem;">
+            <div class="card pig-dashboard-card" style="width: 22rem;">
               <%= image_tag booking.pig.photo, class:"card-img-top" %>
                 <div class="card-body card-body-dashboard">
                   <div>
