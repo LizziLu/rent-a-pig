@@ -4,10 +4,12 @@ class PigsController < ApplicationController
     @markers = @pigs.geocoded.map do |pig|
       {
         lat: pig.latitude,
-        lng: pig.longitude
+        lng: pig.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { pig: pig }),
+        image_url: helpers.asset_url('pigmarker.png')
       }
     end
-  end 
+  end
 
   def show
     @booking = Booking.new

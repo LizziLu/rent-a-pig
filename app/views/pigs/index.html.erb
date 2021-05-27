@@ -1,27 +1,27 @@
 <div class="container">
-  <h1 class = "text-center index-header mb-8">Pick A Pig For Your Purpose</h1>
+  <h1 class = "index-header m-8">Pick A Pig For Your Purpose</h1>
+  <div class="index-all">
 
-  <div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-
-  <div class= "pig-grid">
-    <% @pigs.each do |p| %>
-    <div class= "grid-pig">
-    <div>
-      <%= image_tag p.photo, class:"pig-image" %>
-      <ul class= "pig-property-list">
-        <li class= "pig-name"><%= link_to p.name, pig_path(p) %></li>
-        <li class="pig-list-item"><%= p.profession %></li>
-        <li class="pig-list-item"><%= p.age %> years old</li>
-        <li class="pig-list-item"><%= p.weight %> kg</li>
-        <li class="pig-list-item  font-weight-bold"><%= p.price %> € per day</li>
-      </ul>
+    <div class= "pig-grid">
+      <% @pigs.each do |p| %>
+      <div class= "grid-pig">
+        <div>
+          <%= image_tag p.photo, class:"pig-image" %>
+          <ul class= "pig-property-list">
+            <li class= "pig-name"><%= link_to p.name, pig_path(p) %></li>
+            <li class="pig-list-item"><%= p.profession %></li>
+            <li class="pig-list-item"><%= p.age %> years old</li>
+            <li class="pig-list-item"><%= p.weight %> kg</li>
+            <li class="pig-list-item  font-weight-bold"><%= p.price %> € per day</li>
+          </ul>
+        </div>
+        <p class="pig-bio"> <%= p.bio %></p>
+      </div>
+      <% end %>
     </div>
-      <p class="pig-bio"> <%= p.bio %></p>
+    <div id="map"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
-    <% end %>
   </div>
 </div>
