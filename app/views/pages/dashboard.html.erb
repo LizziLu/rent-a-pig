@@ -1,0 +1,18 @@
+
+  <% @offered_pigs.each do |p| %>
+  <%= image_tag p.photo %>
+  <p><%= p.name %></p>
+  <p><%= p.weight %></p>
+  <p><%= p.age %></p>
+  <% end %>
+
+  <%if current_user.bookings.present? %>
+    <% @bookings.each do |booking| %>
+
+    <div>
+          <%= booking.pig.name %>
+
+    </div>
+    <% end %>
+  <% end %>
+
