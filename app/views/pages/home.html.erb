@@ -14,16 +14,29 @@
       <p id="side-image-box-text-top">Do you need a to do your taxes? <br> The doctor does not have time for you? <br> Your business needs a UI-Designer?</p>
       <p id="side-image-box-text-bottom">Your pig has more skills than your boss? <br> No matter if you seek a pig or want to offer your pig´s services <br> Pick a Pig can help! </p>
       <div class= side-image-box-button>
-        <%= link_to "Pick a pig!", pigs_path, class: "btn btn-primary" %>
+        <%= link_to "Discover lovely Pigs in your area", pigs_path, class: "btn btn-primary" %>
       </div>
     </div>
-      <div class="">
-        <h5>Our newest professional pig</h5>
-        <div class="card-product d-flex">
-          <img src="https://images.unsplash.com/photo-1583205188670-ce90796eb01c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80" />
-          <div class="card-product-infos">
-            <h2>Meet Betsy</h2>
-            <p>The 250kg full-stack Web Dev Master</p>
+      <div class="right-column-pigs">
+        <div class="column-pig">
+          <h5 class= "column-pig-header text-center">Our newest professional pig</h5>
+          <div class="card-product">
+            <img src="https://images.unsplash.com/photo-1583205188670-ce90796eb01c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80" />
+            <div class="card-product-infos">
+              <h2 class="column-pig-link"><%= link_to "Meet Betsy", pigs_path %></h2>
+              <p>The 250kg full-stack Web Dev Master</p>
+              <p class="font-weight-bold">66 € per day</p>
+            </div>
+          </div>
+          <div class="column-pig">
+          <h5 class="column-pig-header text-center">Our pig of year</h5>
+          <div class="card-product">
+            <img src="https://images.unsplash.com/photo-1583205188670-ce90796eb01c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80" />
+            <div class="card-product-infos">
+              <h2><%= link_to "Meet Betsy", pigs_path, class:"column-pig-link" %></h2>
+              <p>The 250kg full-stack Web Dev Master</p>
+              <p class="font-weight-bold mb-8">66 € per day</p>
+            </div>
           </div>
         </div>
       </div>
