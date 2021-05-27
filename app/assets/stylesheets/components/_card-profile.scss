@@ -1,5 +1,17 @@
 #card-profile {
 position: sticky;
 margin-right: 20px;
-border-radius: 50px;
+border-radius: 30px;
+border: none;
+margin-top: 30px
+}
+
+#profile-pic {
+  height: 300px;
+  width: 300px;
+  margin: 20px auto;
+}
+
+#profile-items  {
+  justify-content: center;
 }

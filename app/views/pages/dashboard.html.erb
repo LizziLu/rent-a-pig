@@ -2,14 +2,13 @@
 <div class="container d-flex">
 
 <!-- Profile card-->
-  <div id = "card-profile" class="card" style="width: 25rem;">
-    <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80 " class="card-img-top" alt="...">
+  <div id = "card-profile" class="card text-center" style="width: 25rem;">
+    <img id= "profile-pic" src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80 " class="card-img-top rounded-circle" alt="...">
   <div class="card-body">
       <h5 class="card-title">
         <%= current_user.first_name %> <%= current_user.last_name%>
       </h5>
-      <!-- <div class="card-text"> -->
-      <div class="footer-links">
+      <div id ="profile-items" class="footer-links">
         <a href="#"><i class="far fa-envelope"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -34,38 +33,44 @@
 <!-- Offer card-->
     <div >
 <!-- Pig cards -->
-
-    <h1>Offered Pigs</h1>
+    <div class = "pig-overview">
+    <h2>Offered Pigs</h2>
      <div class="row">
 
           <% @offered_pigs.each do |p| %>
           <div class="col">
-            <div class="card" style="width: 18rem;">
+            <div class="card pig-dashboard-card" style="width: 18rem;">
               <%= image_tag p.photo, class:"card-img-top" %>
-                <div class="card-body">
-                <h5 class="card-title"><%=p.name%></h5>
-                <p class="card-text">...</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
+                <div class="card-body card-body-dashboard">
+                  <div>
+                    <h2><%=p.name%></h2>
+                  </div>
+                  <h2><%=p.price%> € per day</h2>
+                  </div>
             </div>
           </div>
           <% end %>
-
       </div>
+</div>
 
-
-      <h1>Booked Pigs</h1>
-          <div class="row">
+      <h2>Booked Pigs</h2>
+          <div class="row pig-overview">
 
             <%if current_user.bookings.present? %>
             <% @bookings.each do |booking| %>
           <div class="col">
-            <div class="card" style="width: 18rem;">
+            <div class="card pig-dashboard-card" style="width: 18rem;">
               <%= image_tag booking.pig.photo, class:"card-img-top" %>
-                <div class="card-body">
-                <h5 class="card-title"><%=booking.pig.name%></h5>
+                <div class="card-body card-body-dashboard">
+                  <div>
+                                      <h2><%=booking.pig.name%></h2>
+                  </div>
+                  <h2><%=booking.pig.price%> € per day</h2>
+                  </div>
+
+           <!--      <h5 class="card-title"><%=booking.pig.name%></h5>
                 <p class="card-text">...</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary">Go somewhere</a> -->
               </div>
             </div>
           </div>
