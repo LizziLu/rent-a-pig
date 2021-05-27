@@ -25,18 +25,18 @@ puts "creating 25 fake pigs"
 
 
 
-pig = Pig.new(
-name: "Luis",
-user: User.last,
-profession: "Tax Auditor",
-weight: rand(25..500),
-age: rand(2..100),
-price: rand(1..100),
-bio: "Luis likes to dance like no is watching while listening loudly to Abba or Dubstep. Sometimes his neighbors complain. But Luis doesn´t care."
-)
-file = URI.open("https://cdnb.artstation.com/p/assets/images/images/006/978/227/large/luis-ramos-porco1.jpg?1502742323")
-pig.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
-pig.save!
+  pig = Pig.new(
+  name: "Luis",
+  user: User.last,
+  profession: "Tax Auditor",
+  weight: rand(25..500),
+  age: rand(2..100),
+  price: rand(1..100),
+  bio: "Luis likes to dance like no is watching while listening loudly to Abba or Dubstep. Sometimes his neighbors complain. But Luis doesn´t care."
+  )
+  file = URI.open("https://cdnb.artstation.com/p/assets/images/images/006/978/227/large/luis-ramos-porco1.jpg?1502742323")
+  pig.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+  pig.save!
 
 pig = Pig.new(
 name: "Frances",

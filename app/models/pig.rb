@@ -10,4 +10,7 @@ class Pig < ApplicationRecord
   validates :bio, presence: true, length: { minimum: 100 }
   validates :weight, presence: true
   validates :price, presence: true
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
