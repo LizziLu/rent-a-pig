@@ -1,7 +1,13 @@
 class PigsController < ApplicationController
   def index
     @pigs = Pig.all
-  end
+    @markers = @pigs.geocoded.map do |pig|
+      {
+        lat: pig.latitude,
+        lng: pig.longitude
+      }
+    end
+  end 
 
   def show
     @booking = Booking.new
