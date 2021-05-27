@@ -38,7 +38,7 @@
      <div class="row">
 
           <% @offered_pigs.each do |p| %>
-          <div class="col">
+          <div class="col-6">
             <div class="card pig-dashboard-card" style="width: 18rem;">
               <%= image_tag p.photo, class:"card-img-top" %>
                 <div class="card-body card-body-dashboard">
@@ -53,17 +53,18 @@
       </div>
 </div>
 
+<div class = "pig-overview">
       <h2>Booked Pigs</h2>
           <div class="row pig-overview">
 
             <%if current_user.bookings.present? %>
             <% @bookings.each do |booking| %>
-          <div class="col">
+          <div class="col-6">
             <div class="card pig-dashboard-card" style="width: 18rem;">
               <%= image_tag booking.pig.photo, class:"card-img-top" %>
                 <div class="card-body card-body-dashboard">
                   <div>
-                                      <h2><%=booking.pig.name%></h2>
+                    <h2><%=booking.pig.name%></h2>
                   </div>
                   <h2><%=booking.pig.price%> € per day</h2>
                   </div>
@@ -73,10 +74,10 @@
                 <a href="#" class="btn btn-primary">Go somewhere</a> -->
               </div>
             </div>
-          </div>
           <% end %>
           <% end %>
 
+          </div>
       </div>
 
     </div>
