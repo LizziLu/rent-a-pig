@@ -34,8 +34,9 @@ gem 'simple_form'
 gem 'email_validator'
 
 gem 'cloudinary', '~> 1.16.0'
-
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'geocoder'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
