@@ -30,6 +30,15 @@ class PigsController < ApplicationController
     end
   end
 
+  def dashboard
+    @user = current_user
+    @offered_pigs = Pig.where(user: @user)
+    @pigs = Pig.all
+    #@bookings = Pig.where(bookings belong to current user )
+
+
+  end
+
   private
 
   def pig_params

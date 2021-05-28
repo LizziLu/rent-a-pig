@@ -1,0 +1,39 @@
+#card-profile {
+background-color: white;
+position: sticky;
+margin-right: 20px;
+border-radius: 10px;
+border: none;
+margin-top: 30px;
+border: 2px solid rgb(197, 146, 42);
+box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+#profile-pic {
+  height: 30%;
+  width: 100%;
+  margin: 40px auto 10px auto;
+  padding: 0 10px;
+  object-fit: cover;
+}
+
+#profile-items  {
+  justify-content:center;
+  margin-bottom: 30px;
+}
+
+.spacer {
+  margin-top: 40px;
+}
+
+.btn-width {
+  width: 100%;
+}
+
+.dashboard-info {
+  padding: 20px;
+  // border: 2px solid rgb(197, 146, 42);
+  border-radius: 10px;
+  background-color:rgb(234, 210, 177);
+
+}

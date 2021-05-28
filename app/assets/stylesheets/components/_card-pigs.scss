@@ -1,0 +1,55 @@
+.pig-overview {
+  background-color:rgb(234, 210, 177);
+  border-radius: 10px;
+  margin: 30px 0;
+  padding-bottom: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border: 1px solid rgb(197, 146, 42);
+
+}
+
+.dashboard-title {
+  color: rgb(197, 146, 42);
+}
+
+
+.pig-dashboard-card {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.pig-dashboard-card > img {
+  height:150px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.pig-dashboard-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-body-dashboard {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.dashboard-header {
+  background-color: white;
+  padding: 20px 20px 5px 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+.no-margin {
+  margin-right: 0
+}
+
