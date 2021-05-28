@@ -1,5 +1,6 @@
 // Specific CSS for your home-page
 
+// left side
 .side-image-box{
   background-size: cover;
   background-position: center;
@@ -16,7 +17,7 @@
 .side-image-box-button {
   position:absolute;
   bottom: 16px;
-  left: 35%;
+  left: 18%;
 }
 
 #side-image-box-text-bottom {
@@ -26,4 +27,27 @@
 
 #side-image-box-text-top {
   margin-top: 32px;
+}
+
+
+//right hand side
+
+.right-column-pigs {
+  display: flex;
+  flex-direction:column;
+}
+
+.column-pig {
+}
+
+.column-pig-header {
+background-color: #ffb3b3;
+padding: 4px;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+margin: 0;
+}
+
+.column-pig-link {
+  text-decoration: none;
 }
