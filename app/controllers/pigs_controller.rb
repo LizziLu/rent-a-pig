@@ -42,6 +42,6 @@ class PigsController < ApplicationController
   private
 
   def pig_params
-    params.require(:pig).permit(:name, :weight, :age, :profession, :bio, :photo, :price)
+    params.require(:pig).permit(:name, :weight, :age, :profession, :bio, :photo, :price, :address)
   end
 end
