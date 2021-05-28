@@ -25,7 +25,9 @@
     <p>Because without a pig... <br> Is life actually worth living?</p>
   </div>
 </div> -->
-<div class="flexbox-pig">
+<div class= "container">
+<div class="row">
+  <div class="col-4">
   <div class ="pig-info">
     <h1><strong><%= @pig.name %></strong></h1>
       <div id ="pig-stars" class="footer-links">
@@ -38,7 +40,7 @@
         <h6 class="spacer2"><strong>Weight:</strong> <%= @pig.weight %>kg</h6>
         <h6 class="spacer2"><strong>Age:</strong>  <%= @pig.age %></h6>
         <h6 class="spacer2"><strong>Profession:</strong>  <%= @pig.profession %></h6>
-        <div class="text-justify spacer">
+        <div class="text-justify">
         <h6 class="spacer2"><strong>Bio:</strong>  <%= @pig.bio %></h6>
         <h6 class="spacer2"><strong>Price:</strong>  <%= @pig.price %> € per day</h6>
       </div>
@@ -51,9 +53,14 @@
     <p style="color:green"><%= "booked"%></p>
     <% end %>
   </div>
-<%=image_tag @pig.photo, id:"pig-picture"%>
-
+  </div>
+  <div class="col-8">
+    <div class="background-image-pig" style= "background-image:url('<%=cl_image_path @pig.photo.key, id:"pig-picture"%>')" ></div> 
+  </div>
 </div>
+</div>
+
+
 
 
 
