@@ -2,6 +2,8 @@
   <div class="container">
     <h1>Pick a Pig</h1>
     <p>Because without a pig... <br> Is life actually worth living?</p>
+     <%= link_to "Book your pig", pigs_path, id: "landing-page-button", class: "btn btn-primary" %>
+
   </div>
 </div>
 
@@ -10,33 +12,36 @@
 <div class="container">
   <div class="d-flex justify-content-between align-items-center">
     <div class="side-image-box" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url( <%= image_path "home-side-image.jpg" %>)">
-      <h3 id="side-image-box-header">Book your Pig for any occasion</h3>
+      <h3 id="side-image-box-header">Book your pig for any occasion</h3>
       <p id="side-image-box-text-top">Do you need a to do your taxes? <br> The doctor does not have time for you? <br> Your business needs a UI-Designer?</p>
       <p id="side-image-box-text-bottom">Your pig has more skills than your boss? <br> No matter if you seek a pig or want to offer your pig´s services <br> Pick a Pig can help! </p>
       <div class= side-image-box-button>
-        <%= link_to "Discover lovely Pigs in your area", pigs_path, class: "btn btn-primary" %>
+        <%= link_to "Discover lovely pigs in your area", pigs_path, class: "btn btn-primary" %>
       </div>
     </div>
       <div class="right-column-pigs">
         <div class="column-pig">
           <h5 class= "column-pig-header text-center">Our newest professional pig</h5>
           <div class="card-product">
-            <img src="https://images.unsplash.com/photo-1583205188670-ce90796eb01c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80" />
+            <img <%= image_tag Pig.last.photo %> 
             <div class="card-product-infos">
-              <h2 class="column-pig-link"><%= link_to "Meet Betsy", pigs_path %></h2>
-              <p>The 250kg full-stack Web Dev Master</p>
-              <p class="font-weight-bold">66 € per day</p>
+              <h2 class="column-pig-link"><%= link_to Pig.last.name, pigs_path %></h2>
+              <p>The <%= Pig.last.weight %> kg <%= Pig.last.profession %>!</p>
+              <p> Living in <%= Pig.last.address %>. <br> <%= Pig.last.name %> is wating for you! </p>
+              <p class="font-weight-bold"><%= Pig.last.price %> € per day</p> 
             </div>
           </div>
           <div class="column-pig">
-          <h5 class="column-pig-header text-center">Our pig of year</h5>
+          <h5 class="column-pig-header text-center">Our pig of the year</h5>
           <div class="card-product">
-            <img src="https://images.unsplash.com/photo-1583205188670-ce90796eb01c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80" />
+            <img <%= image_tag Pig.first.photo %> 
             <div class="card-product-infos">
-              <h2><%= link_to "Meet Betsy", pigs_path, class:"column-pig-link" %></h2>
-              <p>The 250kg full-stack Web Dev Master</p>
-              <p class="font-weight-bold mb-8">66 € per day</p>
+              <h2 class="column-pig-link"><%= link_to Pig.first.name, pigs_path %></h2>
+              <p>The <%= Pig.first.weight %> kg <%= Pig.first.profession %>!</p>
+              <p> Living in <%= Pig.first.address %>. <br><%= Pig.first.name %> is holding this title with pride.</p>
+              <p class="font-weight-bold"><%= Pig.first.price %> € per day</p> 
             </div>
+          </div>
           </div>
         </div>
       </div>

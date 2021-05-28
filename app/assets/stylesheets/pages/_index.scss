@@ -9,8 +9,10 @@
 }
 
 .index-header{
-  color: #ffb3b3;
+  color: rgb(197, 146, 42);
   font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .pig-grid {
@@ -31,6 +33,7 @@
     width: 100px;
     height: 100px;
     border-radius: 8px;
+    object-fit: cover;
   }
   .pig-property-list{
     list-style-type: none;
@@ -51,6 +54,11 @@
   }
   .pig-list-item{
     font-size: small;
+    margin-bottom: 2px;
+  }
+  .pig-adress{
+    text-decoration: underline;
+    margin-bottom: 8px;
   }
 }
 
