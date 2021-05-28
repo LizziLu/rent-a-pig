@@ -1,3 +1,9 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -8,5 +14,15 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 50px;
+}
+
+.avatar {
+  height: 40px;
+  weight: 16px;
+  object-fit: cover;
+}
+
+.nav-link:hover {
+  font-weight: bold;
 }
