@@ -26,21 +26,27 @@
   </div>
 </div> -->
 <div class="flexbox-pig">
-<!--   <%=image_tag @pig.photo, id:"pig-picture"%> -->
-
-
   <div class ="pig-info">
-
-      <h2><strong><%= @pig.name %></strong></h2>
-      <p>Weight: <%= @pig.weight %></p>
-      <p>Age: <%= @pig.age %></p>
-      <p>Profession: <%= @pig.profession %></p>
-      <p>Bio: <%= @pig.bio %></p>
-      <p>Price: <%= @pig.price %> € per day</p>
-
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <h1><strong><%= @pig.name %></strong></h1>
+      <div id ="pig-stars" class="footer-links">
+        <i class="fas fa-star"></i></a>
+        <i class="fas fa-star"></i></a>
+        <i class="fas fa-star"></i></a>
+        <i class="fas fa-star"></i></a>
+        <i class="fas fa-star"></i></a>
+      </div>
+        <h6 class="spacer2"><strong>Weight:</strong> <%= @pig.weight %>kg</h6>
+        <h6 class="spacer2"><strong>Age:</strong>  <%= @pig.age %></h6>
+        <h6 class="spacer2"><strong>Profession:</strong>  <%= @pig.profession %></h6>
+        <div class="text-justify spacer">
+        <h6 class="spacer2"><strong>Bio:</strong>  <%= @pig.bio %></h6>
+        <h6 class="spacer2"><strong>Price:</strong>  <%= @pig.price %> € per day</h6>
+      </div>
+      <div>
+    <button id="show-button" type="button" class="btn btn-primary spacer" data-toggle="modal" data-target="#exampleModal">
             Book now
     </button>
+      </div>
     <% unless @pig.bookings.where(user: current_user).empty?%>
     <p style="color:green"><%= "booked"%></p>
     <% end %>
@@ -56,7 +62,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Choose a date</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
