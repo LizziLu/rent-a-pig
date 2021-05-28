@@ -9,6 +9,8 @@
   .pig-image{
     width: 100px;
     height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
   }
   .pig-property-list{
     list-style-type: none;
