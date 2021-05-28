@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="card-show">
       <%=image_tag @pig.photo%>
     <div class="card-show-infos">
@@ -6,21 +6,50 @@
         <h2><%= @pig.name %></h2>
       </div>
        <ul class="pig-list">
-          <li><u>Weight:</u> <%= @pig.weight %></li>
+          <li>Weight:</u> <%= @pig.weight %></li>
           <li><u>Age:</u> <%= @pig.age %></li>
           <li><u>Profession:</u> <%= @pig.profession %></li>
           <li><u>Bio:</u> <%= @pig.bio %></li>
           <li><u>Price:</u> <%= @pig.price %> € per day</li>
         </ul>
-        <div>
+        <div> -->
           <!-- Button trigger modal -->
 
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+
+
+
+
+<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= cl_image_path @pig.photo.key%>')">
+  <div class="container">
+    <h1>Pick a Pig</h1>
+    <p>Because without a pig... <br> Is life actually worth living?</p>
+  </div>
+</div> -->
+<div class="flexbox-pig">
+<!--   <%=image_tag @pig.photo, id:"pig-picture"%> -->
+
+
+  <div class ="pig-info">
+
+      <h2><strong><%= @pig.name %></strong></h2>
+      <p>Weight: <%= @pig.weight %></p>
+      <p>Age: <%= @pig.age %></p>
+      <p>Profession: <%= @pig.profession %></p>
+      <p>Bio: <%= @pig.bio %></p>
+      <p>Price: <%= @pig.price %> € per day</p>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Book now
-          </button>
-          <% unless @pig.bookings.where(user: current_user).empty?%>
-          <p style="color:green"><%= "booked"%></p>
-          <% end %>
+    </button>
+    <% unless @pig.bookings.where(user: current_user).empty?%>
+    <p style="color:green"><%= "booked"%></p>
+    <% end %>
+  </div>
+<%=image_tag @pig.photo, id:"pig-picture"%>
+
+</div>
+
+
 
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
